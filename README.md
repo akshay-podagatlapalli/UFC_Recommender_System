@@ -16,13 +16,15 @@ To get started, simply respond to a few questions asked by the model. It will ta
 ## Data Collection
 The data required to build this model was obtained from the following source (https://www.kaggle.com/datasets/rajeevw/ufcdata). 
 
+
 ## Data Cleaning
 The final dataset that is being used to provide the recommendations was produced by going through the following stages: 
-  •	All the stats presented in the original dataset were collected per fight, per fighter. This data was presented chronologically from the inception of the UFC until the year 2021. 
-    o	Because this model recommends fighters, and not fights, the cumulative stats had to be collected per fighter. 
-  •	The primary key in this dataset is the `fighter_name`. However, the original dataset had `R_fighter_name` and `B_fighter_name` as the primary and secondary keys. 
-    o	Because there are going to be multiple records of the same fighter’s name in this dataset since the same fighter will have had multiple fights, all the fights per fighter were aggregated by the fighter name, for every `R_fighter_name` and `B_fighter_name`. 
-  •	Once the primary key was obtained, the stats per fight, per fighter was aggregated, either by `average()`, `count()`, or `max()`. 
-      o	The goal with this was to obtain a single record per fighter with the most accurate stats. 
-  •	Once this data was prepared, the next step involved classifying every fighter into a specific fight style. This was done by following this excellent article (https://literalfightnerd.com/posts/2022-01-05-visualizing-fighter-styles/)
-  •	After classifying every fighter into a specific fight style, data analysis and PCA was performed to build the recommender model. 
+  *	All the stats presented in the original dataset were collected per fight, per fighter. This data was presented chronologically from the inception of the UFC until the year 2021. 
+    *	Because this model recommends fighters, and not fights, the cumulative stats had to be collected per fighter. 
+  *	The primary key in this dataset is the `fighter_name`. However, the original dataset had `R_fighter_name` and `B_fighter_name` as the primary and secondary keys. 
+    *	Because there are going to be multiple records of the same fighter’s name in this dataset since the same fighter will have had multiple fights, all the fights per fighter were aggregated by the fighter name, for every `R_fighter_name` and `B_fighter_name`. 
+  *	Once the primary key was obtained, the stats per fight, per fighter was aggregated, either by `average()`, `count()`, or `max()`. 
+      *	The goal with this was to obtain a single record per fighter with the most accurate stats. 
+  *	Once this data was prepared, the next step involved classifying every fighter into a specific fight style. This was done by following this excellent article (https://literalfightnerd.com/posts/2022-01-05-visualizing-fighter-styles/)
+  *	After classifying every fighter into a specific fight style, data analysis and PCA was performed to build the recommender model. 
+  
