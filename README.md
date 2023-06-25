@@ -10,8 +10,6 @@ To get started, simply respond to a few questions asked by the model. It will ta
 
 ![rec_sys](https://github.com/akshay-podagatlapalli/UFC_Recommender_System/assets/65557678/c2af0d8e-86f0-4f58-a167-ad0c86fdf9cc)
 
-# Data Collection, Cleaning, and Analysis
-
 
 ## Data Collection
 The data required to build this model was obtained from the following source (https://www.kaggle.com/datasets/rajeevw/ufcdata). 
