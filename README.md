@@ -52,3 +52,8 @@ It's important to note that in this approach, the PCA analysis and modification 
 Additionally, the model may consider other factors or techniques to further refine the recommendations. These could include factors such as popularity, recent performance, user feedback, or any other relevant contextual information.
 Overall, this approach utilizes PCA analysis to capture the underlying structure in the user's preferences and combines it with cosine similarity to identify fighters with stats that align well with the user's modified preference vector. By leveraging both PCA analysis and cosine similarity, the model can generate more personalized and relevant recommendations for the user.
 
+
+## Next Steps
+
+
+While this model serves a first iteration of a successful proof-of-concept, the next steps will involve utilizing more features that can be utilized to rank fighters based on other metrics such as their popularity, most watched fights, social media presence, or recent achievements. By incorporating additional features, the recommender model can provide a more comprehensive and dynamic ranking of fighters.
