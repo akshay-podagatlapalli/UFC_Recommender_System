@@ -30,7 +30,7 @@ The final dataset that is being used to provide the recommendations was produced
 ## Formulating the Recommender Model 
 How does the model actually come up with the recommendations? 
 The short answer is that it uses cosine similarity between the users’ responses and the fighter stats from the dataset. 
-The more involved answer has a few steps involved, in how the model comes up with the recommendation, which is listed below: 
+The more involved answer has a few steps involved, in how the model comes up with the recommendation, which are listed below: 
 * The model asks the user 5 questions. 
 * The first two questions help filter down the responses by asking the user their preferred fighting style and their preferred weight class. 
 * This filtering step helps narrow down the dataset to focus on fighters who match the user's preferences in terms of fighting style and weight class. By identifying the user's preferred criteria, the model can reduce the number of potential recommendations and provide more relevant suggestions.
@@ -41,7 +41,7 @@ The more involved answer has a few steps involved, in how the model comes up wit
     * Question 5 > PC3
   * Each PC’s loading score provides a vector representation of how much each feature contributes to it corresponding principal component. 
   * The user’s response, which is in between the range of [0, 10], adds an additional weight to the loading score vector by multiplying the features associated with the user’s preference and dividing the features that are opposite of the user’s preference by the value entered by the user. 
-  * This is done for questions 3 to 5 and the modified loadings scores are then combined into single vector. 
+  * This is done for questions 3 to 5 and the modified loading scores are then combined into single vector. 
   * The more similar the fighter's stats are to the combined vector, the higher the cosine similarity score.
   * Based on the computed cosine similarity scores, the model ranks the fighters and generates a list of recommendations. Fighters with higher cosine similarity scores, indicating a stronger similarity to the user's combined preference vector, are considered more suitable recommendations.
 
