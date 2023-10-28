@@ -15,16 +15,16 @@ Data Cleaning
 
 The dataset used for recommendations underwent the following stages of refinement:
 
-    The original dataset documented stats per fight for each fighter, presented in chronological order from UFC's inception through 2021.
+* The original dataset documented stats per fight for each fighter, presented in chronological order from UFC's inception through 2021.
         To focus on recommending fighters (not individual fights), we compiled cumulative stats for each fighter.
 
-    The dataset's primary identifier was fighter_name, but it originally featured R_fighter_name and B_fighter_name as main and auxiliary keys.
+* The dataset's primary identifier was fighter_name, but it originally featured R_fighter_name and B_fighter_name as main and auxiliary keys.
         Given multiple entries for the same fighter (reflecting multiple bouts), we aggregated fight data under each fighter's name for both R_fighter_name and B_fighter_name.
 
-    After establishing the primary key, we aggregated stats per fight for each fighter using functions like average(), count(), and max().
+* After establishing the primary key, we aggregated stats per fight for each fighter using functions like average(), count(), and max().
         This helped present a consolidated record for each fighter with precise stats.
 
-    Fighter classification by style was achieved by following this insightful article: Visualizing Fighter Styles.
+* Fighter classification by style was achieved by following this insightful article: Visualizing Fighter Styles.
 
     Subsequently, we performed data analysis and PCA to construct the recommendation model.
 
@@ -34,18 +34,18 @@ Wondering how the recommendations emerge?
 
 In short, our model leverages cosine similarity, comparing user responses with the dataset's fighter statistics. Here's a deeper dive into the process:
 
-    Users answer five questions.
+Users answer five questions.
 
-    The first two queries hone in on user preferences regarding fighting styles and weight classes, enabling the model to curate a narrowed dataset featuring aligned fighters.
+The first two queries hone in on user preferences regarding fighting styles and weight classes, enabling the model to curate a narrowed dataset featuring aligned fighters.
 
-    The subsequent three questions are derived from PCA analysis:
-        Question 3 corresponds to PC1, Question 4 to PC2, and Question 5 to PC3.
-        Each principal component (PC) has a loading score that offers insight into feature contribution.
-        User responses (ranging between 0 and 10) adjust these loading scores. Desired features get multiplied, while less-preferred features get divided by the user's input. This process is applied to questions 3 to 5.
+The subsequent three questions are derived from PCA analysis:
+    Question 3 corresponds to PC1, Question 4 to PC2, and Question 5 to PC3.
+    Each principal component (PC) has a loading score that offers insight into feature contribution.
+    User responses (ranging between 0 and 10) adjust these loading scores. Desired features get multiplied, while less-preferred features get divided by the user's input. This process is applied to questions 3 to 5.
 
-    The modified loading scores merge into a singular vector. The closer a fighter's stats align with this combined vector, the higher their cosine similarity score.
+The modified loading scores merge into a singular vector. The closer a fighter's stats align with this combined vector, the higher their cosine similarity score.
 
-    Fighters are then ranked based on these scores, and the top contenders emerge as recommendations.
+Fighters are then ranked based on these scores, and the top contenders emerge as recommendations.
 
 This methodology emphasizes the importance of user preferences, ensuring that recommendations resonate with individual tastes. While PCA uncovers user preference structures, cosine similarity pinpoints fighters with stats harmonizing with the user's adjusted preference vector.
 
