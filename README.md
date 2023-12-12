@@ -6,7 +6,8 @@ Using a blend of data analysis and user preferences, our system offers personali
 
 To begin, answer a few questions posed by the model. Based on your input, it will sift through a vast roster of UFC fighters (both active and retired) and compile a top 5 list of fighters you should explore further.
 
-rec_sys
+![ufc_rec](https://github.com/akshay-podagatlapalli/UFC_Recommender_System/assets/65557678/0218bcca-dd39-4adc-bcd9-a88a33007c3c)
+
 
 ## Data Collection
 
