@@ -1,18 +1,19 @@
 # UFC Recommender System
 
-Eager to explore the exhilarating world of Mixed Martial Arts (MMA)? If you've only heard of UFC in passing or witnessed the banter between UFC fighters without understanding the context, you're at the right place! Our UFC Recommender System will guide you through the pulse-pounding realm of MMA, introducing you to some of the most iconic fighters in UFC history.
+Eager to explore the exhilarating world of Mixed Martial Arts (MMA)? If you've only heard of UFC in passing or witnessed the banter between UFC fighters without understanding the context, you're at the right place! The hope with this UFC Recommender System is to provide some introduction to the sport of MMA, and also introduce you to some of the most iconic fighters in UFC history.
 
-Using a blend of data analysis and user preferences, our system offers personalized fight recommendations tailored to your tastes. Whether you're drawn to fierce striking confrontations, intricate ground game tactics, or heart-stopping comebacks, we've got something for you.
+Using a blend of data analysis and user preferences, this system offers personalized fighter recommendations. Whether you're drawn to fierce striking confrontations or intricate ground game tactics, this model will help tease it out for you.
 
-To begin, answer a few questions posed by the model. Based on your input, it will sift through a vast roster of UFC fighters (both active and retired) and compile a top 5 list of fighters you should explore further.
+Answer a few questions posed by the model and based on your input, it will sift through a vast roster of UFC fighters (both active and retired) and compile a top 5 list of fighters you should explore further.
 
 ![ufc_rec](https://github.com/akshay-podagatlapalli/UFC_Recommender_System/assets/65557678/0218bcca-dd39-4adc-bcd9-a88a33007c3c)
 
 
 ## Data Collection
 
-Our model's data foundation comes from this source: UFC Data on Kaggle.
-Data Cleaning
+This model's data foundation comes from this source: UFC Data on Kaggle.
+
+### Data Cleaning
 
 The dataset used for recommendations underwent the following stages of refinement:
 
@@ -31,9 +32,7 @@ The dataset used for recommendations underwent the following stages of refinemen
 
 ## Formulating the Recommender Model
 
-Wondering how the recommendations emerge?
-
-In short, our model leverages cosine similarity, comparing user responses with the dataset's fighter statistics. Here's a deeper dive into the process:
+In short, this model leverages cosine similarity, comparing user responses with the dataset's fighter statistics. Here's a deeper dive into the process:
 
 Users answer five questions.
 
